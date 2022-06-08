@@ -33,4 +33,4 @@ Conceitos embarcados:
     
 - TEST POST:
 
-         curl -d '{"nome": "Produto teste 1", "preco": 20.00}'  -H "Content-Type: application/json" -X POST http://localhost:3000//api/produtos
+         curl -d '{"nome": "Produto teste 1", "preco": 20.00}'  -H "Content-Type: application/json" -X POST http://localhost:3000/api/produtos
