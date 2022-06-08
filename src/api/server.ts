@@ -17,12 +17,12 @@ app.get(`${basePath}`, (req: Request, res: Response) => {
   res.send('Tudo ok');
 });
 
-app.get(`/${basePath}/products`, (req: Request, res: Response) => {
+app.get(`${basePath}/products`, (req: Request, res: Response) => {
 
   res.send(produtoRepository.buscarTodos());
 });
 
-app.post(`/${basePath}/products`, (req: Request, res: Response) => {
+app.post(`${basePath}/products`, (req: Request, res: Response) => {
   const body = req.body as Produto;
 
   const produto = new  Produto(uuid(), body.nome, body.preco);
@@ -30,7 +30,7 @@ app.post(`/${basePath}/products`, (req: Request, res: Response) => {
   res.status(201).send();
 });
 
-app.put(`/${basePath}/products/:id`, (req: Request, res: Response) => {
+app.put(`${basePath}/products/:id`, (req: Request, res: Response) => {
   const id = req.params.id;
   const body = req.body as Produto;
 
@@ -41,7 +41,7 @@ app.put(`/${basePath}/products/:id`, (req: Request, res: Response) => {
   res.status(200).send();
 });
 
-app.delete(`/${basePath}/products/:id`, (req: Request, res: Response) => {
+app.delete(`${basePath}/products/:id`, (req: Request, res: Response) => {
   const id = req.params.id;
   
   const produto = produtoRepository.buscarPorId(id);
