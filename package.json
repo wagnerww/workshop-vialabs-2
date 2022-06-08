@@ -7,7 +7,7 @@
     "build": "npx tsc",
     "start": "node dist/api/server.js",
     "test": "jest --verbose ./src",
-    "converage-report": "npm run test -- --coverage"
+    "coverage-report": "npm run test -- --coverage"
   },
   "keywords": [],
   "author": "",
