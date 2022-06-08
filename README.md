@@ -30,6 +30,10 @@ Conceitos embarcados:
 - ACCESS:
 
     http://localhost:3000
+    
+- TEST POST:
+
+   curl -d '{"nome": "Produto teste 1", "preco": 20.00}'  -H "Content-Type: application/json" -X POST http://localhost:3000//api/produtos
 
 ## STEP BY STEPS TO WORKSHOP PLAN
 npm init -y
